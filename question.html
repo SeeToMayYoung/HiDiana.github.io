@@ -21,34 +21,31 @@
                 </h1>
                 <div class="p-6">
                     <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                        <div id="loadingBar" class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 0%"> 0%</div>
+                        <div id="loadingBar" class="bg-green-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 0%"> 0%</div>
                       </div>
                 </div>
             </div>
             <div class="bg-gray-400 flex flex-col h-[50vh] flex flex-col justify-center items-center">
                 <h1 id="questionNumber" class="font-bold text-2xl underline">sample_text</h1>
                 <p id="questionText" class="text-center font-bold py-4">sample_text</p>
-                    <!-- <span id="addButton" class="material-symbols-outlined text-center pt-4 text-[10vh]">
-                        add_circle
-                    </span> -->
                 <div class="flex flex-col align-center w-[75%] gap-4">
-                    <button id="optAText" onclick="checkAnswer('optA')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <button id="optAText" onclick="checkAnswer('optA')" class="bg-blue-200 hover:bg-blue-500 text-black font-bold py-2 px-4 rounded">
                         Button
                       </button>
-                    <button id="optBText" onclick="checkAnswer('optB')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <button id="optBText" onclick="checkAnswer('optB')" class="bg-blue-200 hover:bg-blue-500 text-black font-bold py-2 px-4 rounded">
                         Button
                       </button>
-                    <button id="optCText" onclick="checkAnswer('optC')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <button id="optCText" onclick="checkAnswer('optC')" class="bg-blue-200 hover:bg-blue-500 text-black font-bold py-2 px-4 rounded">
                         Button
                       </button>
-                    <button id="optDText" onclick="checkAnswer('optD')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <button id="optDText" onclick="checkAnswer('optD')" class="bg-blue-200 hover:bg-blue-500 text-black font-bold py-2 px-4 rounded">
                         Button
                       </button>
                 </div>
             </div>
             <div class="bg-gray-700 h-[25vh] flex flex-col justify-center">
                 <h1 class="text-center text-white font-bold text-2xl">
-                    xixixi
+                    Semangat!!
                 </h1>
             </div>
         </div>
@@ -61,18 +58,39 @@
 
     let question = [
         {
-            "question" : 'This is Question 1?',
+            "question" : 'Kita pertama kali ketemu dan kenal di..?',
+            "topic" : "Relationship",
             "optA" : {
-                "text" : 'A. This is Incorrect',
+                "text" : 'A. CWS',
                 "status" : false
             },
             "optB" : {
-                "text" : 'B. This is Incorrect',
+                "text" : 'B. A802',
                 "status" : false
             },
             "optC" : {
-                "text" : 'C. This is Correct',
+                "text" : 'C. Sergun',
                 "status" : true
+            },
+            "optD" : {
+                "text" : 'D. UKS',
+                "status" : false
+            }
+        },
+        {
+            "question" : 'Film pertama yang kita tonton bareng adalah..?',
+            "topic" : "Relationship",
+            "optA" : {
+                "text" : 'A. Oppenheimer',
+                "status" : false
+            },
+            "optB" : {
+                "text" : 'B. Suzume',
+                "status" : true
+            },
+            "optC" : {
+                "text" : 'C. Barbie',
+                "status" : false
             },
             "optD" : {
                 "text" : 'D. This is Incorrect',
@@ -80,40 +98,362 @@
             }
         },
         {
-            "question" : 'This is Question 2?',
+            "question" : 'Apa rasa susu cimory yang diana kasih dan aku sampe bawa ke gym?',
+            "topic" : "Relationship",
             "optA" : {
-                "text" : 'A. This is Incorrect',
-                "status" : false
-            },
-            "optB" : {
-                "text" : 'B. This is Correct',
+                "text" : 'A. Sea Salt',
                 "status" : true
             },
+            "optB" : {
+                "text" : 'B. Almond',
+                "status" : false
+            },
             "optC" : {
-                "text" : 'C. This is Incorrect',
+                "text" : 'C. Chocolate Tiramisu',
                 "status" : false
             },
             "optD" : {
-                "text" : 'D. This is Incorrect',
+                "text" : 'D. Matcha',
                 "status" : false
             }
         },
         {
-            "question" : 'This is Question 3?',
+            "question" : 'Motor siapakah yang ku pake pas kita first date ke Aeon (belum official)?',
+            "topic" : "Relationship",
             "optA" : {
-                "text" : 'A. This is Correct',
-                "status" : true
+                "text" : 'A. Abdi',
+                "status" : false
             },
             "optB" : {
-                "text" : 'B. This is Incorrect',
+                "text" : 'B. Tata',
                 "status" : false
             },
             "optC" : {
-                "text" : 'C. This is Incorrect',
+                "text" : 'C. Jesse',
                 "status" : false
             },
             "optD" : {
-                "text" : 'D. This is Incorrect',
+                "text" : 'D. Rico',
+                "status" : true
+            }
+        },
+        {
+            "question" : 'Berapa beban Shoulder Press Jasong ketika ngegym bareng Diana?',
+            "topic" : "Relationship",
+            "optA" : {
+                "text" : 'A. 10kg',
+                "status" : true
+            },
+            "optB" : {
+                "text" : 'B. 7.5kg',
+                "status" : false
+            },
+            "optC" : {
+                "text" : 'C. 12.5kg',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. 15kg',
+                "status" : false
+            }
+        },
+        {
+            "question" : 'Jalan-jalan terakhir kita sebelum aku OJT adalah ke..?',
+            "topic" : "Relationship",
+            "optA" : {
+                "text" : 'A. TamBud',
+                "status" : true
+            },
+            "optB" : {
+                "text" : 'B. IKEA',
+                "status" : false
+            },
+            "optC" : {
+                "text" : 'C. Aeon',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. Menara BCA',
+                "status" : false
+            }
+        },
+        {
+            "question" : 'Dimana letak surat cinta Diana?',
+            "topic" : "Relationship",
+            "optA" : {
+                "text" : 'A. Rak kumpulan hadiah di atas kasur Jasong',
+                "status" : false
+            },
+            "optB" : {
+                "text" : 'B. Belakang HP Jasong',
+                "status" : true
+            },
+            "optC" : {
+                "text" : 'C. Dibuang :(',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. Tersimpan aman dalam lemari pakaian Jasong',
+                "status" : false
+            }
+        },
+        {
+            "question" : 'Siapa temen yang pertama aku kasih tau tentang deket sama Diana?',
+            "topic" : "Relationship",
+            "optA" : {
+                "text" : 'A. Abdi',
+                "status" : false
+            },
+            "optB" : {
+                "text" : 'B. Hansen',
+                "status" : false
+            },
+            "optC" : {
+                "text" : 'C. Rico',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. Zaka',
+                "status" : true
+            }
+        },
+        {
+            "question" : 'Di hari marugame, makanan kita paling terakhir adalah?',
+            "topic" : "Relationship",
+            "optA" : {
+                "text" : 'A. Subway',
+                "status" : false
+            },
+            "optB" : {
+                "text" : 'B. Food Court TamBud',
+                "status" : true
+            },
+            "optC" : {
+                "text" : 'C. Nasgor depan RTB',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. Krispy Kreme',
+                "status" : false
+            }
+        },
+        {
+            "question" : 'Kegampangan ya..?',
+            "topic" : "???",
+            "optA" : {
+                "text" : 'A. Iyanih, bikin lebih sulit dong! :3',
+                "status" : true
+            },
+            "optB" : {
+                "text" : 'B. Ndak, sulit banget...',
+                "status" : false
+            },
+            "optC" : {
+                "text" : 'C. Ndak, sulit banget...',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. Ndak, sulit banget...',
+                "status" : false
+            }
+        },
+        {
+            "question" : 'Kenapa Jasong bisa join Panit Outing?',
+            "topic" : "About JSG",
+            "optA" : {
+                "text" : 'A. Ikhlas dari dalam hati',
+                "status" : false
+            },
+            "optB" : {
+                "text" : 'B. Disuruh komti',
+                "status" : false
+            },
+            "optC" : {
+                "text" : 'C. Kalah kertas batu gunting sama Jesse',
+                "status" : true
+            },
+            "optD" : {
+                "text" : 'D. Kalah kertas batu gunting sama Abdi',
+                "status" : false
+            }
+        },
+        {
+            "question" : 'Nomor Kamar Jasong di RTB adalah?',
+            "topic" : "About JSG",
+            "optA" : {
+                "text" : 'A. B512',
+                "status" : false
+            },
+            "optB" : {
+                "text" : 'B. B511',
+                "status" : false
+            },
+            "optC" : {
+                "text" : 'C. B522',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. B521',
+                "status" : true
+            }
+        },
+        {
+            "question" : 'Kalo yang Sebelum B521?',
+            "topic" : "About JSG",
+            "optA" : {
+                "text" : 'A. A332',
+                "status" : false
+            },
+            "optB" : {
+                "text" : 'B. A331',
+                "status" : false
+            },
+            "optC" : {
+                "text" : 'C. A326',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. A316',
+                "status" : true
+            }
+        },
+        {
+            "question" : 'Tanggal berapa Jasong mulai OJT?',
+            "topic" : "About JSG",
+            "optA" : {
+                "text" : 'A. 21 Agustus 2023',
+                "status" : true
+            },
+            "optB" : {
+                "text" : 'B. 14 Agustus 2023',
+                "status" : false
+            },
+            "optC" : {
+                "text" : 'C. 28 Agustus 2023',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. 17 Agustus 2023',
+                "status" : false
+            }
+        },
+        {
+            "question" : 'Jasong masuk biro apa?',
+            "topic" : "About JSG",
+            "optA" : {
+                "text" : 'A. NIS D',
+                "status" : true
+            },
+            "optB" : {
+                "text" : 'B. NIS E',
+                "status" : false
+            },
+            "optC" : {
+                "text" : 'C. NIS B',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. NIS C',
+                "status" : false
+            }
+        },
+        {
+            "question" : 'Apa nama website yang Jasong develop?',
+            "topic" : "About JSG",
+            "optA" : {
+                "text" : 'A. JIRA',
+                "status" : false
+            },
+            "optB" : {
+                "text" : 'B. Nadia',
+                "status" : true
+            },
+            "optC" : {
+                "text" : 'C. Nayla',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. myDevelopment',
+                "status" : false
+            }
+        },
+        {
+            "question" : 'Tipe kopi yang Jasong seduh tiap sore bareng bang Irvan?',
+            "topic" : "About JSG",
+            "optA" : {
+                "text" : 'A. Espresso',
+                "status" : false
+            },
+            "optB" : {
+                "text" : 'B. Aero Press',
+                "status" : false
+            },
+            "optC" : {
+                "text" : 'C. Latte',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. V60',
+                "status" : true
+            }
+        },
+        {
+            "question" : 'Berapa minimal nilai matkul ops Hukum supaya IPK Jasong terselamatkan?',
+            "topic" : "About JSG",
+            "optA" : {
+                "text" : 'A. 86',
+                "status" : false
+            },
+            "optB" : {
+                "text" : 'B. 84',
+                "status" : false
+            },
+            "optC" : {
+                "text" : 'C. 80',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. 82',
+                "status" : true
+            }
+        },
+        {
+            "question" : 'Jam berapa gerbang utama kosan Jasong ditutup?',
+            "topic" : "About JSG",
+            "optA" : {
+                "text" : 'A. 22.00',
+                "status" : false
+            },
+            "optB" : {
+                "text" : 'B. 21.00',
+                "status" : true
+            },
+            "optC" : {
+                "text" : 'C. 20.30',
+                "status" : false
+            },
+            "optD" : {
+                "text" : 'D. 20.00',
+                "status" : false
+            }
+        },
+        {
+            "question" : 'Nomor HP Jasong?',
+            "topic" : "About JSG",
+            "optA" : {
+                "text" : 'A. 0858-9671-8469',
+                "status" : false
+            },
+            "optB" : {
+                "text" : 'B. 0858-6497-4869',
+                "status" : false
+            },
+            "optC" : {
+                "text" : 'C. 0858-4767-1769',
+                "status" : true
+            },
+            "optD" : {
+                "text" : 'D. 0858-7418-7169',
                 "status" : false
             }
         },
@@ -124,21 +464,29 @@
             fireCorrectAlert()
             if(question_index+1 < question.length){
                 question_index += 1
-                document.getElementById("questionNumber").innerText = 'Question ' + (question_index+1) + ':'
+                document.getElementById("questionNumber").innerText = 'Pertanyaan ' + (question_index+1) + ' - ' + question[question_index]['topic'] + ':'
                 document.getElementById("questionText").innerText = question[question_index]['question']
                 document.getElementById("optAText").innerText = question[question_index]['optA']['text']
                 document.getElementById("optBText").innerText = question[question_index]['optB']['text']
                 document.getElementById("optCText").innerText = question[question_index]['optC']['text']
                 document.getElementById("optDText").innerText = question[question_index]['optD']['text']
+                }else{
+                    Swal.fire({
+                        title: 'Selamat!',
+                        text: 'Anda telah menjawab semua pertanyaan dengan benar!',
+                        icon: 'info'
+                    }).then(function(){
+                        window.location = 'reward.html'
+                    })        
+                }            
                 addAnswered()
-            }
         }else{
             fireIncorrectAlert()
         }
     }
 
     function assignQuestion(){
-        document.getElementById("questionNumber").innerText = 'Question ' + (question_index+1) + ':'
+        document.getElementById("questionNumber").innerText = 'Pertanyaan ' + (question_index+1) + ' - ' + question[question_index]['topic'] + ':'
         document.getElementById("questionText").innerText = question[question_index]['question']
         document.getElementById("optAText").innerText = question[question_index]['optA']['text']
         document.getElementById("optBText").innerText = question[question_index]['optB']['text']
@@ -150,7 +498,7 @@
         if(answered < 20){
             console.log(answered)
             answered += 1
-            let percentage = (answered / 20) * 100
+            let percentage = (answered / question.length) * 100
             document.getElementById("loadingBar").innerText = percentage.toFixed(2) + '%'
             document.getElementById("loadingBar").style.width = percentage.toFixed(2) + '%'
         }
