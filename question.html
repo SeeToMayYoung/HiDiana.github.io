@@ -11,8 +11,8 @@
 </head>
 <body onload="assignQuestion()">
     <div class="w-[100vw] h-[100vh] bg-black flex flex-row justify-center">
-        <div class="bg-white h-[100%] aspect-[9/21] flex flex-col align-center">
-            <div class="h-[25vh] bg-gray-300 flex flex-col justify-center">   
+        <div class="bg-white h-[100%] aspect-[9/21] flex flex-col align-center text-white">
+            <div class="h-[25vh] bg-gray-600 flex flex-col justify-center">   
                 <span id="asd" class="material-symbols-outlined text-center pt-4 text-[10vh]">
                     fact_check
                 </span>
@@ -20,33 +20,38 @@
                     Question Page
                 </h1>
                 <div class="p-6">
-                    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                        <div id="loadingBar" class="bg-green-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 0%"> 0%</div>
+                    <div class="w-full bg-gray-300 rounded-full">
+                        <div id="loadingBar" class="text-black bg-green-600 text-xs font-medium text-center p-0.5 leading-none rounded-full" style="width: 0%"> 0%</div>
                       </div>
                 </div>
             </div>
-            <div class="bg-gray-400 flex flex-col h-[50vh] flex flex-col justify-center items-center">
-                <h1 id="questionNumber" class="font-bold text-2xl underline">sample_text</h1>
-                <p id="questionText" class="text-center font-bold py-4">sample_text</p>
+            <div class="bg-gray-300 flex flex-col h-[50vh] flex flex-col justify-center items-center">
+                <h1 id="questionNumber" class="font-bold text-2xl underline text-black">sample_text</h1>
+                <p id="questionText" class="text-center font-bold py-4 text-black">sample_text</p>
                 <div class="flex flex-col align-center w-[75%] gap-4">
-                    <button id="optAText" onclick="checkAnswer('optA')" class="bg-blue-200 hover:bg-blue-500 text-black font-bold py-2 px-4 rounded">
+                    <button id="optAText" onclick="checkAnswer('optA')" class="bg-gray-700 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded">
                         Button
                       </button>
-                    <button id="optBText" onclick="checkAnswer('optB')" class="bg-blue-200 hover:bg-blue-500 text-black font-bold py-2 px-4 rounded">
+                    <button id="optBText" onclick="checkAnswer('optB')" class="bg-gray-700 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded">
                         Button
                       </button>
-                    <button id="optCText" onclick="checkAnswer('optC')" class="bg-blue-200 hover:bg-blue-500 text-black font-bold py-2 px-4 rounded">
+                    <button id="optCText" onclick="checkAnswer('optC')" class="bg-gray-700 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded">
                         Button
                       </button>
-                    <button id="optDText" onclick="checkAnswer('optD')" class="bg-blue-200 hover:bg-blue-500 text-black font-bold py-2 px-4 rounded">
+                    <button id="optDText" onclick="checkAnswer('optD')" class="bg-gray-700 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded">
                         Button
                       </button>
                 </div>
             </div>
-            <div class="bg-gray-700 h-[25vh] flex flex-col justify-center">
-                <h1 class="text-center text-white font-bold text-2xl">
-                    Semangat!!
-                </h1>
+            <div class="bg-gray-600 h-[25vh] flex flex-col justify-center">
+                <a href="index.html" class="flex flex-row justify-center items-center gap-4">
+                    <span class="material-symbols-outlined font-bold text-white">
+                        arrow_back
+                    </span>
+                    <h1 class="text-center text-white font-bold text-2xl">
+                        Back to start page..
+                    </h1>
+                </a>
             </div>
         </div>
     </div>
@@ -59,7 +64,7 @@
     let question = [
         {
             "question" : 'Kita pertama kali ketemu dan kenal di..?',
-            "topic" : "Relationship",
+            "topic" : "General",
             "optA" : {
                 "text" : 'A. CWS',
                 "status" : false
@@ -79,7 +84,7 @@
         },
         {
             "question" : 'Film pertama yang kita tonton bareng adalah..?',
-            "topic" : "Relationship",
+            "topic" : "General",
             "optA" : {
                 "text" : 'A. Oppenheimer',
                 "status" : false
@@ -93,13 +98,13 @@
                 "status" : false
             },
             "optD" : {
-                "text" : 'D. This is Incorrect',
+                "text" : 'D. Jujutsu Kaisen',
                 "status" : false
             }
         },
         {
             "question" : 'Apa rasa susu cimory yang diana kasih dan aku sampe bawa ke gym?',
-            "topic" : "Relationship",
+            "topic" : "General",
             "optA" : {
                 "text" : 'A. Sea Salt',
                 "status" : true
@@ -119,7 +124,7 @@
         },
         {
             "question" : 'Motor siapakah yang ku pake pas kita first date ke Aeon (belum official)?',
-            "topic" : "Relationship",
+            "topic" : "General",
             "optA" : {
                 "text" : 'A. Abdi',
                 "status" : false
@@ -139,7 +144,7 @@
         },
         {
             "question" : 'Berapa beban Shoulder Press Jasong ketika ngegym bareng Diana?',
-            "topic" : "Relationship",
+            "topic" : "General",
             "optA" : {
                 "text" : 'A. 10kg',
                 "status" : true
@@ -159,7 +164,7 @@
         },
         {
             "question" : 'Jalan-jalan terakhir kita sebelum aku OJT adalah ke..?',
-            "topic" : "Relationship",
+            "topic" : "General",
             "optA" : {
                 "text" : 'A. TamBud',
                 "status" : true
@@ -179,7 +184,7 @@
         },
         {
             "question" : 'Dimana letak surat cinta Diana?',
-            "topic" : "Relationship",
+            "topic" : "General",
             "optA" : {
                 "text" : 'A. Rak kumpulan hadiah di atas kasur Jasong',
                 "status" : false
@@ -199,7 +204,7 @@
         },
         {
             "question" : 'Siapa temen yang pertama aku kasih tau tentang deket sama Diana?',
-            "topic" : "Relationship",
+            "topic" : "General",
             "optA" : {
                 "text" : 'A. Abdi',
                 "status" : false
@@ -219,7 +224,7 @@
         },
         {
             "question" : 'Di hari marugame, makanan kita paling terakhir adalah?',
-            "topic" : "Relationship",
+            "topic" : "General",
             "optA" : {
                 "text" : 'A. Subway',
                 "status" : false
@@ -418,7 +423,7 @@
             }
         },
         {
-            "question" : 'Jam berapa gerbang utama kosan Jasong ditutup?',
+            "question" : 'Jam berapa gerbang utama kosan lama Jasong ditutup?',
             "topic" : "About JSG",
             "optA" : {
                 "text" : 'A. 22.00',
@@ -464,7 +469,7 @@
             fireCorrectAlert()
             if(question_index+1 < question.length){
                 question_index += 1
-                document.getElementById("questionNumber").innerText = 'Pertanyaan ' + (question_index+1) + ' - ' + question[question_index]['topic'] + ':'
+                document.getElementById("questionNumber").innerText = 'Pertanyaan ' + (question_index+1) + ' (' + question[question_index]['topic'] + '):'
                 document.getElementById("questionText").innerText = question[question_index]['question']
                 document.getElementById("optAText").innerText = question[question_index]['optA']['text']
                 document.getElementById("optBText").innerText = question[question_index]['optB']['text']
@@ -486,7 +491,7 @@
     }
 
     function assignQuestion(){
-        document.getElementById("questionNumber").innerText = 'Pertanyaan ' + (question_index+1) + ' - ' + question[question_index]['topic'] + ':'
+        document.getElementById("questionNumber").innerText = 'Pertanyaan ' + (question_index+1) + ' (' + question[question_index]['topic'] + '):'
         document.getElementById("questionText").innerText = question[question_index]['question']
         document.getElementById("optAText").innerText = question[question_index]['optA']['text']
         document.getElementById("optBText").innerText = question[question_index]['optB']['text']
@@ -507,7 +512,7 @@
     function fireCorrectAlert(){
         Swal.fire({
             title: 'Correct!',
-            text: 'Jawaban anda benar!',
+            text: 'Jawaban Diana benar!',
             icon: 'success'
         })
     }
@@ -515,7 +520,7 @@
     function fireIncorrectAlert(){
         Swal.fire({
             title: 'Incorrect!',
-            text: 'Jawaban anda salah!',
+            text: 'Jawaban Diana salah!',
             icon: 'error'
         })
     }
